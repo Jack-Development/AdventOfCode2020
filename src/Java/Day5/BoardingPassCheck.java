@@ -10,7 +10,7 @@ public class BoardingPassCheck {
     static ArrayList<String> inputString;
 
     public static void main(String[] args) {
-        File file = new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Java.Day5.txt");
+        File file = new File("Resources/Day5.txt");
         writeInputString(file);
         ArrayList<Integer> totals = new ArrayList<>();
         for(int i = 0; i < inputString.size(); i++){

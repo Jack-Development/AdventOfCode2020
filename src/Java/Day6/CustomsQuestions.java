@@ -9,7 +9,7 @@ public class CustomsQuestions {
     static ArrayList<String> inputString = new ArrayList<>();
 
     public static void main(String[] args) {
-        writeInputString(new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Java.Day6.txt"));
+        writeInputString(new File("Resources/Day6.txt"));
 
         ArrayList<Integer> splitNum = new ArrayList<>();
         System.out.println(inputString.size());

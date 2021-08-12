@@ -13,7 +13,7 @@ public class LuggageProcessing {
     static ArrayList<String> bags = new ArrayList<>();
 
     public static void main(String[] args) {
-        writeInputString(new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Java.Day7.txt"));
+        writeInputString(new File("Resources/Day7.txt"));
         for(String s : inputString){
             stringCombo.add(new String[2]);
         }

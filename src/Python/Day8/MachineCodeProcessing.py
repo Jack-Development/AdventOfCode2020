@@ -3,7 +3,7 @@ import re
 from copy import deepcopy
 
 p = Path('.').absolute()
-resources = p.parents[1].joinpath('Resources')
+resources = p.parents[2].joinpath('Resources')
 file = open(resources.joinpath('Python.Day8.txt'), "r")
 
 cleanList = [[]]

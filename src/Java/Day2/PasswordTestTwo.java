@@ -11,9 +11,9 @@ public class PasswordTestTwo {
 
     public static void main(String[] args) {
         try {
-            File file = new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Java.Day2.txt");
+            File file = new File("Resources/Day2.txt");
             Scanner s = new Scanner(file);
-            ArrayList<String> input = new ArrayList<String>();
+            ArrayList<String> input = new ArrayList<>();
             while(s.hasNextLine()){
                 input.add(s.nextLine());
             }
