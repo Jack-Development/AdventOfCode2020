@@ -2,6 +2,8 @@ package Day4;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,7 +13,9 @@ public class PassportClearance {
     static String[] searchKeywords = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"};
 
     public static void main(String[] args) {
-        File file = new File("Resources/Day4.txt");
+        Path thisFile = Paths.get("").toAbsolutePath();
+        Path greatGrandparent = thisFile.getParent().getParent().getParent();
+        File file = new File(greatGrandparent.toAbsolutePath() + "/Resources/Day4.txt");
         writeInputString(file);
 
         ArrayList<Integer> topNumbs = new ArrayList<>();

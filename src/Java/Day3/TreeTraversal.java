@@ -2,6 +2,8 @@ package Day3;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +12,9 @@ public class TreeTraversal {
 
     public static void main(String[] args) {
         try {
-            File file = new File("Resources/Day3.txt");
+            Path thisFile = Paths.get("").toAbsolutePath();
+            Path greatGrandparent = thisFile.getParent().getParent().getParent();
+            File file = new File(greatGrandparent.toAbsolutePath() + "/Resources/Day3.txt");
             Scanner s = new Scanner(file);
             inputLines = new ArrayList<>();
             while(s.hasNextLine()){

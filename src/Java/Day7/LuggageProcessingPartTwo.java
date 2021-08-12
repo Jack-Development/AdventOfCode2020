@@ -2,6 +2,8 @@ package Day7;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,7 +15,10 @@ public class LuggageProcessingPartTwo {
     static ArrayList<String> bags = new ArrayList<>();
 
     public static void main(String[] args) {
-        writeInputString(new File("Resources/Day7.txt"));
+        Path thisFile = Paths.get("").toAbsolutePath();
+        Path greatGrandparent = thisFile.getParent().getParent().getParent();
+        File file = new File(greatGrandparent.toAbsolutePath() + "/Resources/Day1.txt");
+        writeInputString(file);
         for(String s : inputString){
             stringCombo.add(new String[2]);
         }

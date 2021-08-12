@@ -2,13 +2,17 @@ package Day1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AccountingDecrypt {
     public static void main(String[] args) {
         try {
-            File file = new File("Resources/Day1.txt");
+            Path thisFile = Paths.get("").toAbsolutePath();
+            Path greatGrandparent = thisFile.getParent().getParent().getParent();
+            File file = new File(greatGrandparent.toAbsolutePath() + "/Resources/Day1.txt");
             System.out.println(file.getAbsoluteFile());
             Scanner s = new Scanner(file);
 

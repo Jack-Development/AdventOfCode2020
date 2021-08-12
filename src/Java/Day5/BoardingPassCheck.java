@@ -2,6 +2,8 @@ package Day5;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -10,7 +12,9 @@ public class BoardingPassCheck {
     static ArrayList<String> inputString;
 
     public static void main(String[] args) {
-        File file = new File("Resources/Day5.txt");
+        Path thisFile = Paths.get("").toAbsolutePath();
+        Path greatGrandparent = thisFile.getParent().getParent().getParent();
+        File file = new File(greatGrandparent.toAbsolutePath() + "/Resources/Day1.txt");
         writeInputString(file);
         ArrayList<Integer> totals = new ArrayList<>();
         for(int i = 0; i < inputString.size(); i++){

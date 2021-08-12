@@ -2,6 +2,8 @@ package Day2;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +13,9 @@ public class PasswordTestTwo {
 
     public static void main(String[] args) {
         try {
-            File file = new File("Resources/Day2.txt");
+            Path thisFile = Paths.get("").toAbsolutePath();
+            Path greatGrandparent = thisFile.getParent().getParent().getParent();
+            File file = new File(greatGrandparent.toAbsolutePath() + "/Resources/Day2.txt");
             Scanner s = new Scanner(file);
             ArrayList<String> input = new ArrayList<>();
             while(s.hasNextLine()){
