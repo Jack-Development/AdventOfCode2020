@@ -11,7 +11,7 @@ public class PassportClearance {
     static String[] searchKeywords = {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"};
 
     public static void main(String[] args) {
-        File file = new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Day4.txt");
+        File file = new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Java.Day4.txt");
         writeInputString(file);
 
         ArrayList<Integer> topNumbs = new ArrayList<>();

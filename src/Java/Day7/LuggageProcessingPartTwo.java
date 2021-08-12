@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class LuggageProcessing {
+public class LuggageProcessingPartTwo {
     static ArrayList<String> inputString = new ArrayList<>();
     static ArrayList<ArrayList<String>> requirements = new ArrayList<>();
     static ArrayList<ArrayList<Integer>> bagCount = new ArrayList<>();
@@ -13,7 +13,7 @@ public class LuggageProcessing {
     static ArrayList<String> bags = new ArrayList<>();
 
     public static void main(String[] args) {
-        writeInputString(new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Day7.txt"));
+        writeInputString(new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Java.Day7.txt"));
         for(String s : inputString){
             stringCombo.add(new String[2]);
         }
@@ -30,6 +30,7 @@ public class LuggageProcessing {
         for(int i = 0; i < inputString.size(); i++){
             int num = 0;
             requirements.add(new ArrayList<>());
+            bagCount.add(new ArrayList<>());
             String part1 = "";
             String part2 = "";
             for(String s : inputString.get(i).split(" ")){
@@ -44,6 +45,7 @@ public class LuggageProcessing {
                 }
                 try{
                     Integer.parseInt(s);
+                    bagCount.get(i).add(Integer.parseInt(s));
                     num = 2;
                 }
                 catch (NumberFormatException e){
@@ -56,52 +58,37 @@ public class LuggageProcessing {
                 System.out.println(s);
             }
         }*/
-        int count = 0;
-        for(int i = 0; i < bags.size(); i++){
-            if(findRequirements(bags.get(i))){
-                count++;
-            }
-        }
-        System.out.println(count);
+
+        System.out.println(findRequirements("shiny gold"));
 
         //System.out.println(findRequirements("shiny chartreuse"));
     }
     
-    public static boolean findRequirements(String bagName){
+    public static int findRequirements(String bagName){
         int bagIndex = 0;
         for(int i = 0; i < bags.size(); i++){
             if(bags.get(i).equals(bagName)){
                 bagIndex = i;
             }
         }
+
         ArrayList<String> getRequires = requirements.get(bagIndex);
-        boolean found = false;
-        for(String s : getRequires){
-            if(s.equals("shiny gold")){
-                found = true;
+        ArrayList<Integer> bagRequires = bagCount.get(bagIndex);
+
+        if(getRequires.size() > 0){
+            int total = 0;
+            for(int i = 0; i < getRequires.size(); i++){
+                int countOfBag = bagRequires.get(i);
+                String s = getRequires.get(i);
+                System.out.println("Adding: " + countOfBag + ", " + s + "(Child of: " + bagName + ")");
+                total += countOfBag;
+                total += countOfBag * findRequirements(s);
             }
+            return total;
         }
-        if(!found){
-            if(getRequires.size() > 0){
-                boolean subset = false;
-                for(int i = 0; i < getRequires.size(); i++){
-                    String s = getRequires.get(i);
-                    if(findRequirements(s)){
-                        subset = true;
-                    }
-                }
-                if(subset){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-            else{
-                return false;
-            }
+        else{
+            return 0;
         }
-        return true;
     }
 
     public static void writeInputString(File file){

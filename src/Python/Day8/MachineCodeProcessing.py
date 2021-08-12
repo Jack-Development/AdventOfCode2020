@@ -4,7 +4,7 @@ from copy import deepcopy
 
 p = Path('.').absolute()
 resources = p.parents[1].joinpath('Resources')
-file = open(resources.joinpath('Day8.txt'), "r")
+file = open(resources.joinpath('Python.Day8.txt'), "r")
 
 cleanList = [[]]
 for l in file:

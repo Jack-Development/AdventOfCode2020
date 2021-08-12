@@ -10,7 +10,7 @@ public class TreeTraversal {
 
     public static void main(String[] args) {
         try {
-            File file = new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Day3.txt");
+            File file = new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Java.Day3.txt");
             Scanner s = new Scanner(file);
             inputLines = new ArrayList<String>();
             while(s.hasNextLine()){

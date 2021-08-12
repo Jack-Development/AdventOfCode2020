@@ -2,8 +2,6 @@ package Day6;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,7 +9,7 @@ public class CustomsQuestions {
     static ArrayList<String> inputString = new ArrayList<>();
 
     public static void main(String[] args) {
-        writeInputString(new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Day6.txt"));
+        writeInputString(new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Java.Day6.txt"));
 
         ArrayList<Integer> splitNum = new ArrayList<>();
         System.out.println(inputString.size());

@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class AccountingDecrypt {
     public static void main(String[] args) {
         try {
-            File file = new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Day1.txt");
+            File file = new File("/home/jack/Documents/University/Year 1/AdventOfCode/Resources/Java.Day1.txt");
             Scanner s = new Scanner(file);
 
             ArrayList<Integer> input = new ArrayList<Integer>();
