@@ -1,35 +1,34 @@
-# AdventOfCode
-Advent of Code 2020.
-A collection of problems that were assigned over the month of December that progressively increased in difficulty leading up to the 25th.
- 
-# Problems
+# AdventOfCode 2020 🎄
+
+Welcome to my Advent of Code 2020 solutions repository. Advent of Code is an advent calendar of small programming puzzles, which get progressively more challenging as we approach December 25th. This repository contains my solutions to these puzzles.
+
+![Advent of Code Banner](<https://camo.githubusercontent.com/45e775d95451f2bda211ee757d1a959671cf4c762feb1e7ccaca59925704e333/68747470733a2f2f626c6f67732e7361702e636f6d2f77702d636f6e74656e742f75706c6f6164732f323032302f31312f456b616f5151545845414d4134424e2e6a7067>)
+
+## Problem List 🎁
+
+### Java Solutions
 [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com)
-<br></br>
-Day 1 - Large array addition to target number
 
-Day 2 - Valid password entry
+- Day 1 - Large array addition to target number
+- Day 2 - Valid password entry
+- Day 3 - Map traversal
+- Day 4 - Passport data processing
+- Day 5 - Reducing arrays
+- Day 6 - Data form processing
+- Day 7 - Recursive calculations
 
-Day 3 - Map traversal
-
-Day 4 - Passport data processing
-
-Day 5 - Reducing arrays
-
-Day 6 - Data form processing
-
-Day 7 - Recurssive calculations
-
-<br></br>
+### Python Solutions
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
-<br></br>
-Day 8 - Interpreting low level code
 
-Day 9 - Exploiting cypher weakness *In Progress
-<br></br>
+- Day 8 - Interpreting low level code
+- Day 9 - Exploiting cypher weakness *(In Progress)*
 
-# Running
-All files are designed to run in terminal **as the file structure shown on this repository.**
+## How to Run 🏃
+
+All files are designed to run in terminal **as per the file structure shown in this repository.**
+
 Examples:
+
 ```console
 jack@laptop: java AccountingDecrypt.java
 ```
