@@ -36,3 +36,8 @@ or
 ```console
 jack@laptop: python3 MachineCodeProcessing.py
 ```
+
+## License 📄
+
+This project is licensed under the MIT License. Please see the [LICENSE](LICENSE) file for more details.
+
