@@ -1,3 +1,9 @@
+&nbsp;
+<div id="header" align="center">
+  <img src="https://github.com/Jack-Development/AdventOfCode2020/blob/main/Resources/logo.png" width="300"/>
+</div>
+&nbsp;
+
 # AdventOfCode 2020 🎄
 
 Welcome to my Advent of Code 2020 solutions repository. Advent of Code is an advent calendar of small programming puzzles, which get progressively more challenging as we approach December 25th. This repository contains my solutions to these puzzles.
