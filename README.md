@@ -1,6 +1,6 @@
 &nbsp;
 <div id="header" align="center">
-  <img src="https://github.com/Jack-Development/AdventOfCode2020/blob/main/Resources/logo.png" width="300"/>
+  <img src="https://github.com/Jack-Development/AdventOfCode2020/blob/main/Resources/logo.png" width="220"/>
 </div>
 &nbsp;
 
